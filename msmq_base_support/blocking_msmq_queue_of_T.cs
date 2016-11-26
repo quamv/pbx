@@ -7,7 +7,7 @@ namespace pbx_msmq_integration
 {
 
     /* generic blocking msmq queue with injected supported_types and message parser */
-    public class blocking_msmq_queue<T> : iBlockingReadonlyQueue<T> // BlockingCollection<T>
+    public class blocking_msmq_queue<T> : iBlockingReadonlyQueue<T> 
     {
         /* a blocking queue of msmq messages */
         private blocking_msmq_queue msmq_buffer;

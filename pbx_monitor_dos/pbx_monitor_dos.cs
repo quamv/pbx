@@ -6,11 +6,15 @@ using System.Collections.Generic;
 
 namespace pbx_monitor_dos
 {
-    /* pbx_monitor_dos - a dos-based implementation of a pbx event monitor */
+    /* 
+     * pbx_monitor_dos - a dos-based implementation of a pbx event monitor 
+     */
     class pbx_monitor_dos
     {
 
-        /* program entry point */
+        /* 
+         * program entry point 
+         */
         static void Main(string[] args)
         {
             var queue_name = Properties.Settings.Default.queue_name;
@@ -35,7 +39,11 @@ namespace pbx_monitor_dos
             }
         }
 
-        /* event-specific handlers */
+
+
+        /*
+         * event-specific handlers 
+         */
         private class event_handler_dict : Dictionary<pbx_dto.dto_type, Action<pbx_dto>> { }
         private static event_handler_dict event_handlers = new event_handler_dict()
         {
