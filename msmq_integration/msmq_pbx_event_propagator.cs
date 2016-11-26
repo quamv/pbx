@@ -1,4 +1,4 @@
-﻿using pbx_shared.dto;
+﻿using pbx_dto_lib;
 using pbx_shared.serverpush;
 using System.Messaging;
 using System;

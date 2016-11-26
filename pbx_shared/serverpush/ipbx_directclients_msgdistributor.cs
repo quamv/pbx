@@ -1,4 +1,4 @@
-﻿using pbx_shared.dto;
+﻿using pbx_dto_lib;
 
 namespace pbx_shared.serverpush
 {

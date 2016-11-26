@@ -1,11 +1,12 @@
 ﻿using pbx_shared;
-using pbx_shared.dto;
+using pbx_dto_lib;
 using pbx_shared.misc;
 using pbx_shared.serverpush;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using common_lib.misc;
 
 namespace pbx_lib
 {
@@ -91,18 +92,52 @@ namespace pbx_lib
         }
 
 
+        //private pbx_dto_phonecall call2dto(phonecall call)
+        //{
+
+        //}
+
+
+        private pbx_dto_phonenumber number2dto(phonenumber number)
+        {
+            var dto = new pbx_dto_phonenumber()
+            {
+                phonenbr = number.phonenbr
+                ,
+                linestate = pbx_dto_phonenumber.trunkstates.idle
+                ,
+                linetype = pbx_dto_phonenumber.trunktypes.t1
+            };
+
+            return dto;
+        }
 
         /* data accessors - throw custom exception on invalid request */
 
         public pbx_dto_fullstatus getfullstatusdto()
         {
             var dto = new pbx_dto_fullstatus();
-            dto.phonenumbers = this.getallphonenumbers().ToList(); // trunks;
-            dto.calls = new List<pbx_dto_phonecall>();
-            foreach (var nextcall in this.getallcalls().ToList())
+
+            //// FIXMEBACK
+            var phonenumbers = this.getallphonenumbers().ToList(); // trunks;
+
+            dto.phonenumbers = new List<pbx_dto_phonenumber>();
+
+            foreach (var nbr in phonenumbers)
             {
-                dto.calls.Add(new pbx_dto_phonecall(nextcall));
+                dto.phonenumbers.Add(number2dto(nbr));
             }
+            
+
+            //dto.phonenumbers = this.getallphonenumbers().ToList(); // trunks;
+
+
+            dto.calls = new List<pbx_dto_phonecall>();
+            //foreach (var nextcall in this.getallcalls().ToList())
+            //{
+            //    ////// FIXMEBACK
+            //    //dto.calls.Add(new pbx_dto_phonecall(nextcall));
+            //}
             dto.timestamp = DateTime.Now;
 
             return dto;
@@ -164,9 +199,26 @@ namespace pbx_lib
             // report the new event to any listening clients
             //var calldto = new pbx_dto_phonecall(newcall);
             //var dto = new pbx_dto_callreceived(calldto);
-            this.eventpropagatorqueue.Add(new pbx_dto_callreceived(newcall));
+            this.eventpropagatorqueue.Add(convert(newcall));
 
             return newcall;
+        }
+
+        pbx_dto convert(phonecall call)
+        {
+            var calldto = new pbx_dto_phonecall();
+            calldto.localnbr = call.localnbr;
+            calldto.remotenbr = call.remotenbr;
+            calldto.direction = helper.enumstring2value<pbx_dto_phonecall.calldirection>(call.direction.ToString());
+            calldto.dialednbr = call.dialednbr;
+            calldto.callid = calldto.callid;
+
+            return new pbx_dto_callreceived()
+            {
+                call_dto = calldto
+                ,
+                createdate = DateTime.Now
+            };
         }
 
         public void update_callstate(int callid, phonecall.callstates newstate)
@@ -177,7 +229,12 @@ namespace pbx_lib
                 if (call.callstate != newstate)
                 {
                     call.callstate = newstate;
-                    this.eventpropagatorqueue.Add(new pbx_dto_callstatechanged(callid, newstate));
+
+                    var thenewstate = helper.enumstring2value<pbx_dto_phonecall.callstates>(newstate.ToString());
+                    var dto = new pbx_dto_callstatechanged(callid, thenewstate);
+                    this.eventpropagatorqueue.Add(dto);
+
+                    //this.eventpropagatorqueue.Add(new pbx_dto_callstatechanged(callid, helper.enumstring2value<pbx_dto_phonecall.callstates>(newstate.ToString())));
                 }
             }
         }

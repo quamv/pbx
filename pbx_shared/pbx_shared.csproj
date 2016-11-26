@@ -48,12 +48,9 @@
     <Compile Include="callendpoints\ip_endpoint.cs" />
     <Compile Include="core\supportrep.cs" />
     <Compile Include="core\phonecall.cs" />
-    <Compile Include="dto\pbx_dto_classes.cs" />
-    <Compile Include="dto\pbx_dto_phonecall.cs" />
     <Compile Include="eventreceivers\ipbx_eventreceiver.cs" />
     <Compile Include="eventreceivers\ipbx_eventreceiver_factory.cs" />
     <Compile Include="misc\customexceptions.cs" />
-    <Compile Include="misc\helper.cs" />
     <Compile Include="misc\newcallinfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="core\phonenumber.cs" />
@@ -62,7 +59,15 @@
     <Compile Include="serverpush\pbx_eventpropagator_queue.cs" />
     <Compile Include="serverpush\propagator_collection.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="dto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pbx_dto\pbx_dto\pbx_dto_lib.csproj">
+      <Project>{e22229b5-8bfe-4941-bc41-bcf1d283a65a}</Project>
+      <Name>pbx_dto_lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

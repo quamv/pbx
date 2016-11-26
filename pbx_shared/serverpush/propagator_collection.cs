@@ -1,4 +1,4 @@
-﻿using pbx_shared.dto;
+﻿using pbx_dto_lib;
 using System.Collections.Generic;
 using System;
 

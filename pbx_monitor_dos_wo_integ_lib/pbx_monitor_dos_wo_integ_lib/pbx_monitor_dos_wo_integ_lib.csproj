@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AA706900-E701-4B8C-BE5F-D0E36F3E5989}</ProjectGuid>
+    <ProjectGuid>{E4E166F9-B06F-4108-BB1F-79622DFA0232}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>pbx_monitor_dos</RootNamespace>
-    <AssemblyName>pbx_monitor_dos</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>pbx_monitor_dos_wo_integ_lib</RootNamespace>
+    <AssemblyName>pbx_monitor_dos_wo_integ_lib</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,7 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="pbx_monitor_dos.cs" />
+    <Compile Include="CustomMessageClass.cs" />
+    <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -61,24 +61,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\msmq_base_support\msmq_base_support.csproj">
+    <ProjectReference Include="..\..\msmq_base_support\msmq_base_support.csproj">
       <Project>{221878d9-17e8-4196-ba5c-0dd502337dab}</Project>
       <Name>msmq_base_support</Name>
     </ProjectReference>
-    <ProjectReference Include="..\msmq_integration\pbx_msmq_integration.csproj">
-      <Project>{69120fcd-1b89-4354-97dc-97358cfbe386}</Project>
-      <Name>pbx_msmq_integration</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\pbx_dto\pbx_dto\pbx_dto.csproj">
+    <ProjectReference Include="..\..\pbx_dto\pbx_dto\pbx_dto_lib.csproj">
       <Project>{e22229b5-8bfe-4941-bc41-bcf1d283a65a}</Project>
-      <Name>pbx_dto</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\pbx_shared\pbx_shared.csproj">
-      <Project>{252ee2bd-ab6b-4496-bca0-87811564b7ce}</Project>
-      <Name>pbx_shared</Name>
+      <Name>pbx_dto_lib</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

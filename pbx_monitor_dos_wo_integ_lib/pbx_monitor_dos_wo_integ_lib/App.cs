@@ -1,17 +1,12 @@
-﻿using System;
-using msmq_base_support;
-using pbx_msmq_integration;
+﻿using msmq_base_support;
 using pbx_dto_lib;
+using System;
 using System.Collections.Generic;
 
-namespace pbx_monitor_dos
+namespace pbx_monitor_dos_wo_integ_lib
 {
-    /* 
-     * pbx_monitor_dos - a dos-based implementation of a pbx event monitor 
-     */
-    class pbx_monitor_dos
+    class App
     {
-
         /* 
          * program entry point 
          */
@@ -21,17 +16,17 @@ namespace pbx_monitor_dos
 
             Console.WriteLine("MSMQ Queue Name: " + queue_name);
 
-            iBlockingReadonlyQueue<pbx_dto> pbx_dto_queue = new msmq_pbx_dto_queue(queue_name);
+            iBlockingReadonlyQueue<pbx_dto> q = new blocking_msmq_queue_of_t<pbx_dto>(
+                            queue_name, 
+                            CustomMessageClass._supportedtypes, 
+                            CustomMessageClass._parse_msmq_message);
 
-            Console.WriteLine("Starting receiving queue...");
+            q.start();
 
-            pbx_dto_queue.start();
-
-            Console.WriteLine("Receiving queue started. Consuming from main thread...");
 
             while (true)
             {
-                var dto = pbx_dto_queue.Take();
+                var dto = q.Take();
 
                 Console.WriteLine(dto._dto_type.ToString() + " Event:");
 
@@ -116,7 +111,5 @@ namespace pbx_monitor_dos
             }
 
         };
-
-
     }
 }

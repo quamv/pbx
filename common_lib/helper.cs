@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace pbx_shared.misc
+namespace common_lib.misc
 {
     public class helper
     {
@@ -14,6 +10,13 @@ namespace pbx_shared.misc
         {
             return (T)Enum.Parse(typeof(T), enumvalasstring);
         }
+
+        //public static T enumvalue2string2value<T,U>(U initialval)
+        //{
+        //    var tmp = initialval.ToString();
+
+        //    var result = (T)Enum.Parse(typeof(T), tmp);
+        //}
 
 
     }

@@ -1,14 +1,12 @@
-﻿using System;
+﻿using msmq_base_support;
+using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
 using System.Messaging;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace msmq_base_support
+namespace pbx_msmq_integration
 {
-    public class blocking_msmq_queue_of_t<T> : iBlockingReadonlyQueue<T>
+    /* generic blocking msmq queue with injected supported_types and message parser */
+    public class blocking_msmq_queue_generic<T> : iBlockingReadonlyQueue<T> 
     {
         /* a blocking queue of msmq messages */
         private blocking_msmq_queue msmq_buffer;
@@ -20,13 +18,11 @@ namespace msmq_base_support
         /* constructors */
 
         /* constructor - Type array provided. default to XmlMessageFormatter */
-        public blocking_msmq_queue_of_t(string name, iQueueableType<T> queueable_type)
-            : this(name, queueable_type.supportedtypes, queueable_type.parse_msmq_message) { }
-        public blocking_msmq_queue_of_t(string name, Type[] supported_tpes, Func<Message, T> msgparser_param)
+        public blocking_msmq_queue_generic(string name, Type[] supported_tpes, Func<Message, T> msgparser_param)
             : this(name, new XmlMessageFormatter(supported_tpes), msgparser_param) { }
 
         /* constructor - IMessageFormatter provided */
-        public blocking_msmq_queue_of_t(string name, IMessageFormatter formatter, Func<Message, T> msgparser_param)
+        public blocking_msmq_queue_generic(string name, IMessageFormatter formatter, Func<Message, T> msgparser_param)
         {
             this.msg_parsing_func = msgparser_param;
             this.msmq_buffer = new blocking_msmq_queue(name, formatter);
@@ -41,8 +37,7 @@ namespace msmq_base_support
 
 
         /* start the underlying queue and our processing thread */
-        public void start()
-        {
+        public void start() {
             this.msmq_buffer.start();
             new System.Threading.Thread(message_processing_loop).Start();
         }
@@ -62,5 +57,8 @@ namespace msmq_base_support
                 this._queue.Add(typedobj);
             }
         }
+
     }
+
+
 }

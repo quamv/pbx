@@ -40,6 +40,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\common_lib\common_lib.csproj">
+      <Project>{18456119-e411-462d-a2cd-a8181395ba30}</Project>
+      <Name>common_lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pbx_dto\pbx_dto\pbx_dto_lib.csproj">
+      <Project>{e22229b5-8bfe-4941-bc41-bcf1d283a65a}</Project>
+      <Name>pbx_dto_lib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\pbx_shared\pbx_shared.csproj">
       <Project>{252ee2bd-ab6b-4496-bca0-87811564b7ce}</Project>
       <Name>pbx_shared</Name>

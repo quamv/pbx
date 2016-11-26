@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNet.SignalR.Hubs;
-using pbx_shared.dto;
+using pbx_dto_lib;
 using pbx_shared.serverpush;
 
 namespace pbx_signalr

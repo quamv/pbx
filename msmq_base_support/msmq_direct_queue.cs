@@ -1,4 +1,6 @@
-﻿namespace msmq_base_support
+﻿using System.Messaging;
+
+namespace msmq_base_support
 {
     /*
      * direct_queue
@@ -9,7 +11,7 @@
     {
         public string queue_name { get; set; }
         public string pathfromname(string name) { return @".\private$\" + name; }
-        public System.Messaging.MessageQueue _queue;
+        public MessageQueue _queue;
     }
 }
 

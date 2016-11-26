@@ -1,11 +1,12 @@
-﻿using pbx_shared.dto;
+﻿using pbx_dto_lib;
+using msmq_base_support;
 using System;
 
 namespace pbx_msmq_integration
 {
 
     /* a blocking queue interface to a msmq queue of pbx_dto objects */
-    public class msmq_pbx_dto_queue : blocking_msmq_queue<pbx_dto>
+    public class msmq_pbx_dto_queue : blocking_msmq_queue_of_t<pbx_dto>
     {
         /* all the various pbx_dtos (and accompanying msmq messages) */
         static Type[] supportedtypes = new Type[] {

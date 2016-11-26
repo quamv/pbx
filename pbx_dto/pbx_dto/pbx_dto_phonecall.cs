@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace pbx_shared.dto
+namespace pbx_dto_lib
 {
     public class pbx_dto_phonecall
     {
@@ -12,15 +12,17 @@ namespace pbx_shared.dto
         public DateTime starttime { get; set; }
         public DateTime endtime { get; set; }
 
-        public phonecall.calldirection direction = phonecall.calldirection.inbound;
+        public enum calldirection { inbound, outbound }
+        public calldirection direction = calldirection.inbound;
 
-        public phonecall.callstates callstate = phonecall.callstates.active;
+        public enum callstates { ringing, hold, active, ended, unknown, ringing_again }
+        public callstates callstate = callstates.active;
 
         public List<string> connected_extensions = new List<string>();
 
-        public pbx_dto_phonecall(phonecall call)
+        public pbx_dto_phonecall(pbx_dto_phonecall call)
         {
-            this.callid = call.switchspecificcallid;
+            this.callid = call.callid;
             this.localnbr = call.localnbr;
             this.remotenbr = call.remotenbr;
             this.starttime = call.starttime;
@@ -30,7 +32,7 @@ namespace pbx_shared.dto
 
             foreach (var ext in call.connected_extensions)
             {
-                this.connected_extensions.Add(ext.extension_nbr);
+                this.connected_extensions.Add(ext);
             }
         }
 

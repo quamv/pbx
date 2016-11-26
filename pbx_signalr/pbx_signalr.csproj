@@ -66,6 +66,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\pbx_dto\pbx_dto\pbx_dto_lib.csproj">
+      <Project>{e22229b5-8bfe-4941-bc41-bcf1d283a65a}</Project>
+      <Name>pbx_dto_lib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\pbx_lib\pbx_lib.csproj">
       <Project>{a519ca01-fcd5-4059-9686-2779e62bb1cf}</Project>
       <Name>pbx_lib</Name>

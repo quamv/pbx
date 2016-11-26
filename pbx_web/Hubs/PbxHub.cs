@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
 using pbx_lib;
-using pbx_shared.dto;
+using pbx_dto_lib;
 
 namespace pbx_web
 {

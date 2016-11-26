@@ -5,20 +5,20 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_monitor_dos", "pbx_monitor_dos\pbx_monitor_dos.csproj", "{AA706900-E701-4B8C-BE5F-D0E36F3E5989}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_lib", "pbx_lib\pbx_lib.csproj", "{A519CA01-FCD5-4059-9686-2779E62BB1CF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_shared", "pbx_shared\pbx_shared.csproj", "{252EE2BD-AB6B-4496-BCA0-87811564B7CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_msmq_integration", "msmq_integration\pbx_msmq_integration.csproj", "{69120FCD-1B89-4354-97DC-97358CFBE386}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msmq_base_support", "msmq_base_support\msmq_base_support.csproj", "{221878D9-17E8-4196-BA5C-0DD502337DAB}"
 EndProject
-Project("{1FD68A0A-E993-4FE1-AE69-363516681351}") = "pbx_monitor_dos_uml.ump", "pbx_monitor_dos_uml\pbx_monitor_dos_uml.ump", "{5BE2B671-8368-44E6-BCD3-5D45976DAE47}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C457A056-0876-4FE9-8B3D-B1BE8DA0F84D}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 	EndProjectSection
+EndProject
+Project("{1FD68A0A-E993-4FE1-AE69-363516681351}") = "pbx_monitor_dos_uml2.ump", "pbx_monitor_dos_uml2\pbx_monitor_dos_uml2.ump", "{0ABA9EB1-296D-4DF4-BB88-4798C98BD447}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_dto", "pbx_dto\pbx_dto\pbx_dto.csproj", "{E22229B5-8BFE-4941-BC41-BCF1D283A65A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,14 +36,6 @@ Global
 		{AA706900-E701-4B8C-BE5F-D0E36F3E5989}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AA706900-E701-4B8C-BE5F-D0E36F3E5989}.Release|x86.ActiveCfg = Release|Any CPU
 		{AA706900-E701-4B8C-BE5F-D0E36F3E5989}.Release|x86.Build.0 = Release|Any CPU
-		{A519CA01-FCD5-4059-9686-2779E62BB1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A519CA01-FCD5-4059-9686-2779E62BB1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A519CA01-FCD5-4059-9686-2779E62BB1CF}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A519CA01-FCD5-4059-9686-2779E62BB1CF}.Debug|x86.Build.0 = Debug|Any CPU
-		{A519CA01-FCD5-4059-9686-2779E62BB1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A519CA01-FCD5-4059-9686-2779E62BB1CF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A519CA01-FCD5-4059-9686-2779E62BB1CF}.Release|x86.ActiveCfg = Release|Any CPU
-		{A519CA01-FCD5-4059-9686-2779E62BB1CF}.Release|x86.Build.0 = Release|Any CPU
 		{252EE2BD-AB6B-4496-BCA0-87811564B7CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{252EE2BD-AB6B-4496-BCA0-87811564B7CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{252EE2BD-AB6B-4496-BCA0-87811564B7CE}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -68,13 +60,21 @@ Global
 		{221878D9-17E8-4196-BA5C-0DD502337DAB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{221878D9-17E8-4196-BA5C-0DD502337DAB}.Release|x86.ActiveCfg = Release|Any CPU
 		{221878D9-17E8-4196-BA5C-0DD502337DAB}.Release|x86.Build.0 = Release|Any CPU
-		{5BE2B671-8368-44E6-BCD3-5D45976DAE47}.Debug|Any CPU.ActiveCfg = Release|Win32
-		{5BE2B671-8368-44E6-BCD3-5D45976DAE47}.Debug|Any CPU.Build.0 = Release|Win32
-		{5BE2B671-8368-44E6-BCD3-5D45976DAE47}.Debug|x86.ActiveCfg = Release|Win32
-		{5BE2B671-8368-44E6-BCD3-5D45976DAE47}.Debug|x86.Build.0 = Release|Win32
-		{5BE2B671-8368-44E6-BCD3-5D45976DAE47}.Release|Any CPU.ActiveCfg = Release|Win32
-		{5BE2B671-8368-44E6-BCD3-5D45976DAE47}.Release|x86.ActiveCfg = Release|Win32
-		{5BE2B671-8368-44E6-BCD3-5D45976DAE47}.Release|x86.Build.0 = Release|Win32
+		{0ABA9EB1-296D-4DF4-BB88-4798C98BD447}.Debug|Any CPU.ActiveCfg = Release|Win32
+		{0ABA9EB1-296D-4DF4-BB88-4798C98BD447}.Debug|Any CPU.Build.0 = Release|Win32
+		{0ABA9EB1-296D-4DF4-BB88-4798C98BD447}.Debug|x86.ActiveCfg = Release|Win32
+		{0ABA9EB1-296D-4DF4-BB88-4798C98BD447}.Debug|x86.Build.0 = Release|Win32
+		{0ABA9EB1-296D-4DF4-BB88-4798C98BD447}.Release|Any CPU.ActiveCfg = Release|Win32
+		{0ABA9EB1-296D-4DF4-BB88-4798C98BD447}.Release|x86.ActiveCfg = Release|Win32
+		{0ABA9EB1-296D-4DF4-BB88-4798C98BD447}.Release|x86.Build.0 = Release|Win32
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Debug|x86.Build.0 = Debug|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Release|x86.ActiveCfg = Release|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

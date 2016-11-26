@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_shared", "pbx_shared\pb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_signalr", "pbx_signalr\pbx_signalr.csproj", "{3AB5F900-2D39-439E-BD7B-6ACFE702FE4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_dto_lib", "pbx_dto\pbx_dto\pbx_dto_lib.csproj", "{E22229B5-8BFE-4941-BC41-BCF1D283A65A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "common_lib", "common_lib\common_lib.csproj", "{18456119-E411-462D-A2CD-A8181395BA30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,30 @@ Global
 		{3AB5F900-2D39-439E-BD7B-6ACFE702FE4D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3AB5F900-2D39-439E-BD7B-6ACFE702FE4D}.Release|Win32.ActiveCfg = Release|Any CPU
 		{3AB5F900-2D39-439E-BD7B-6ACFE702FE4D}.Release|Win32.Build.0 = Release|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Debug|Win32.Build.0 = Debug|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Release|Win32.ActiveCfg = Release|Any CPU
+		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Release|Win32.Build.0 = Release|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Debug|Win32.Build.0 = Debug|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Release|Win32.ActiveCfg = Release|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Release|Win32.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
