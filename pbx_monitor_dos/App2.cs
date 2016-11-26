@@ -26,6 +26,8 @@ namespace pbx_monitor_dos
             {
                 var dto = pbx_dto_queue.Take();
 
+                //pbx_dto_queue.
+
                 pbx_event_handler_dos.event_callback(dto);
             }
         }

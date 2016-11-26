@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="blocking_msmq_queue.cs" />
     <Compile Include="blocking_msmq_queue_of_T.cs" />
+    <Compile Include="iBlockingReadonlyQueue.cs" />
     <Compile Include="msmq_direct_queue.cs" />
     <Compile Include="msmq_queue_receiver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

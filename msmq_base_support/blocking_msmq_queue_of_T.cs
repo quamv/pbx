@@ -7,7 +7,7 @@ namespace pbx_msmq_integration
 {
 
     /* generic blocking msmq queue with injected supported_types and message parser */
-    public class blocking_msmq_queue<T> : BlockingCollection<T>
+    public class blocking_msmq_queue<T> : iBlockingReadonlyQueue<T> // BlockingCollection<T>
     {
         /* a blocking queue of msmq messages */
         private blocking_msmq_queue msmq_buffer;
@@ -27,7 +27,14 @@ namespace pbx_msmq_integration
         {
             this.msg_parsing_func = msgparser_param;
             this.msmq_buffer = new blocking_msmq_queue(name, formatter);
+            this._queue = new BlockingCollection<T>();
         }
+
+        /* our private underlying blockingcollection */
+        public BlockingCollection<T> _queue;
+
+        /* pass-through call to BlockingCollection<T>.Take() */
+        public T Take() { return this._queue.Take(); }
 
 
         /* start the underlying queue and our processing thread */
@@ -48,7 +55,7 @@ namespace pbx_msmq_integration
                 var typedobj = msg_parsing_func(newmsg);
 
                 // add to meself
-                this.Add(typedobj);
+                this._queue.Add(typedobj);
             }
         }
 
