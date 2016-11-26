@@ -92,10 +92,25 @@ namespace pbx_lib
         }
 
 
-        //private pbx_dto_phonecall call2dto(phonecall call)
-        //{
+        private pbx_dto_phonecall call2dto(phonecall call)
+        {
+            var dto = new pbx_dto_phonecall()
+            {
+                callid = call.switchspecificcallid
+                 ,
+                dialednbr = call.dialednbr
+                 ,
+                localnbr = call.localnbr
+                 ,
+                remotenbr = call.remotenbr
+                 ,
+                starttime = call.starttime
+                 ,
+                callstate = helper.enumstring2value<pbx_dto_phonecall.callstates>(call.callstate.ToString())
+            };
 
-        //}
+            return dto;
+        }
 
 
         private pbx_dto_phonenumber number2dto(phonenumber number)
@@ -133,11 +148,12 @@ namespace pbx_lib
 
 
             dto.calls = new List<pbx_dto_phonecall>();
-            //foreach (var nextcall in this.getallcalls().ToList())
-            //{
-            //    ////// FIXMEBACK
-            //    //dto.calls.Add(new pbx_dto_phonecall(nextcall));
-            //}
+            foreach (var nextcall in this.getallcalls().ToList())
+            {
+                dto.calls.Add(call2dto(nextcall));
+                ////// FIXMEBACK
+                //dto.calls.Add(new pbx_dto_phonecall(nextcall));
+            }
             dto.timestamp = DateTime.Now;
 
             return dto;
@@ -211,7 +227,7 @@ namespace pbx_lib
             calldto.remotenbr = call.remotenbr;
             calldto.direction = helper.enumstring2value<pbx_dto_phonecall.calldirection>(call.direction.ToString());
             calldto.dialednbr = call.dialednbr;
-            calldto.callid = calldto.callid;
+            calldto.callid = call.switchspecificcallid;
 
             return new pbx_dto_callreceived()
             {

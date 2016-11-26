@@ -6,3 +6,4 @@ C:\Users\admin3\Documents\Visual Studio 2015\Projects\git\pbx\msmq_base_support\
 C:\Users\admin3\Documents\Visual Studio 2015\Projects\git\pbx\msmq_base_support\bin\Debug\msmq_base_support.pdb
 C:\Users\admin3\Documents\Visual Studio 2015\Projects\git\pbx\msmq_base_support\obj\Debug\msmq_base_support.dll
 C:\Users\admin3\Documents\Visual Studio 2015\Projects\git\pbx\msmq_base_support\obj\Debug\msmq_base_support.pdb
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\git\pbx\msmq_base_support\obj\Debug\msmq_base_support.csprojResolveAssemblyReference.cache
