@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("pbx_monitor_dos_wo_integ_lib")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("console app that reads a msmq pbx event queue")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("pbx_monitor_dos_wo_integ_lib")]

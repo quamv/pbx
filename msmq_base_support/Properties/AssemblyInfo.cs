@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("msmq_base_support")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("basic msmq support")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("msmq_base_support")]
