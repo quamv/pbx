@@ -9,7 +9,7 @@ namespace pbx_monitor_singleproject
     {
         static void Main(string[] args)
         {
-            var queue_name = "phoneswitchevents";// Properties.Settings.Default.queue_name;
+            var queue_name = Properties.Settings.Default.queue_name;
 
             Console.WriteLine("MSMQ Queue Name: " + queue_name);
 
