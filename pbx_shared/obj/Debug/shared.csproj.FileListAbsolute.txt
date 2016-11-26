@@ -1,0 +1,9 @@
+C:\src\admin3\kosupportUmlIntegrated\all\shared\bin\Debug\shared.dll
+C:\src\admin3\kosupportUmlIntegrated\all\shared\bin\Debug\shared.pdb
+C:\src\admin3\kosupportUmlIntegrated\all\shared\obj\Debug\shared.dll
+C:\src\admin3\kosupportUmlIntegrated\all\shared\obj\Debug\shared.pdb
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\shared\bin\Debug\shared.dll
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\shared\bin\Debug\shared.pdb
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\shared\obj\Debug\shared.csprojResolveAssemblyReference.cache
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\shared\obj\Debug\shared.dll
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\shared\obj\Debug\shared.pdb

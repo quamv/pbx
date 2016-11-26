@@ -1,0 +1,37 @@
+﻿
+@Html.Partial("components/phonelinestable")
+@Html.Partial("components/phonelinesvlist")
+@*@Html.Partial("_modal1")*@
+
+<div class="row">
+    @*<div class="container">
+        <span data-bind="text: 'last update: ' + laststatusupdate()"></span>
+    </div>*@
+
+    @*<div class="container">
+        <button data-bind="click: modal">modal</button>
+        <button data-bind="click: callsonly">Calls Only</button>
+        <button data-bind="click: alltrunks">All Trunks</button>
+    </div>*@
+
+    <div class="componentwrapper">
+        @*<phonelines_table params="vmobj: new phonelinestable_vm($root.trunks, $root.selected_trunksview)"></phonelines_table>*@
+        <phonelines_vlist params="vmobj: new phonelinestable_vm($root.trunks, $root.selected_trunksview)"></phonelines_vlist>
+    </div>
+
+</div>
+
+
+
+@section scripts {
+    <script src="/Scripts/jquery.signalR-2.2.1.js"></script>
+    <script src="~/Scripts/thenBy.js"></script>
+    <script src="~/signalr/hubs"></script>
+    @Scripts.Render("~/bundles/knockout")
+    <script src="/Scripts/_phonelines_vm.js"></script>
+
+    <script>
+        var vm = new phonelines_vm($.connection);
+    </script>
+}
+

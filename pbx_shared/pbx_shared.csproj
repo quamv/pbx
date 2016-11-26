@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{252EE2BD-AB6B-4496-BCA0-87811564B7CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pbx_shared</RootNamespace>
+    <AssemblyName>pbx_shared</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="core\attendant.cs" />
+    <Compile Include="core\call_route_destination.cs" />
+    <Compile Include="core\call_routing_options.cs" />
+    <Compile Include="core\extension.cs" />
+    <Compile Include="core\hold_music_group.cs" />
+    <Compile Include="core\mailbox.cs" />
+    <Compile Include="core\queue.cs" />
+    <Compile Include="callendpoints\digital_extension.cs" />
+    <Compile Include="callendpoints\Extension.cs" />
+    <Compile Include="callendpoints\ip_endpoint.cs" />
+    <Compile Include="core\supportrep.cs" />
+    <Compile Include="core\phonecall.cs" />
+    <Compile Include="dto\pbx_dto_classes.cs" />
+    <Compile Include="dto\pbx_dto_phonecall.cs" />
+    <Compile Include="eventreceivers\ipbx_eventreceiver.cs" />
+    <Compile Include="eventreceivers\ipbx_eventreceiver_factory.cs" />
+    <Compile Include="misc\customexceptions.cs" />
+    <Compile Include="misc\helper.cs" />
+    <Compile Include="misc\newcallinfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="core\phonenumber.cs" />
+    <Compile Include="serverpush\ipbx_directclients_msgdistributor.cs" />
+    <Compile Include="serverpush\ipbx_msgpropagator.cs" />
+    <Compile Include="serverpush\pbx_eventpropagator_queue.cs" />
+    <Compile Include="serverpush\propagator_collection.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

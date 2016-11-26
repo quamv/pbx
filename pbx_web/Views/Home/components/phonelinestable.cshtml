@@ -1,0 +1,81 @@
+﻿<template id="phonelinestabletemplate">
+    <h3 class="viewheader" data-bind="text: selected_phonelinesview">lines</h3>
+
+    <div data-bind="if: sortedphonelines().length == 0">
+        No data.
+    </div>
+
+    <div data-bind="ifnot: sortedphonelines().length == 0">
+
+        <table class="borderedtable">
+            <thead>
+                <tr>
+                    <th>Phone Number</th>
+                    <th>line State</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: sortedphonelines">
+                <tr>
+                    <td><span data-bind="text: phonenbr"></span></td>
+                    <td>
+
+                        <div data-bind="if: activecall">state:
+                            <span data-bind="text: activecall().callstateobs"></span>
+                            <span data-bind="text: 'Call: ' + activecall().callid + ' remote number: ' + activecall().remotenbr"></span>
+                            <span data-bind="if: activecall().callstateobs() == 0 ">
+                                <button data-bind="click: $root.answercall.bind($root, $data.activecall().callid)">Answer</button>
+                            </span>
+                            <span data-bind="if: activecall().callstateobs() == 1">
+                                <button data-bind="click: $root.resumecall.bind($root, $data.activecall().callid)">Resume</button>
+                                <button data-bind="click: $root.transfer.bind($root, $data.activecall().callid)">Transfer</button>
+                            </span>
+                            <span data-bind="if: activecall().callstateobs() == 2">
+                                <button data-bind="click: $root.holdcall.bind($root, $data.activecall().callid)">Hold</button>
+                            </span>
+
+                            <button data-bind="click: $root.endcall.bind($root, $data.activecall().callid)">End</button>
+
+                            <div data-bind="if: activecall().connected_extensions_obs().length > 0">
+                                connected extensions if wrapper
+                                <div data-bind="with: activecall">
+                                    Connected Extensions:
+                                    <ul data-bind="foreach: connected_extensions_obs">
+                                        <li>
+                                            <span data-bind="text: $data"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        @*<div data-bind="if: linestatestr() == 'busy'">
+                            <button data-bind="click: $root.endcall2.bind($root, $data)">End Call by Line</button>
+                            <button data-bind="click: $root.endcall.bind($root, $data.activecall().callid)">End Call by CallID</button>
+                        </div>*@
+
+                        @*<button data-bind="click: $root.doalert.bind($root)">Alert</button>
+                        <span data-bind="text: linestatestr">
+                        </span>
+                        <div data-bind="if: linestatestr() == 'busy'">
+                            BUSY. call info here.
+                            <button data-bind="click: $root.answercall.bind($root, $data)">Hold</button>
+                            <button data-bind="click: $root.endcall.bind($root, $data)">End Call</button>
+                            <button data-bind="click: $root.endcall2.bind($root, $data)">End Call2</button>
+
+                        </div>
+                        <div data-bind="if: activecall">
+                            active call id: <span data-bind="text: activecall().callid"></span>
+                        </div>
+                        <span data-bind="ifnot: linestatestr() == 'busy'">
+                            line's idle, far's i can tell.
+                        </span>*@
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</template>

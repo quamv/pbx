@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9ba57b90-248e-4bf4-94ea-317d11fb7aa0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54780/wcf/PhoneSwitchPublicAPIService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PhoneSwitchPublicAPIService.xsd" MetadataType="Schema" ID="d8786e93-df6b-401a-9cee-e3213d133ff5" SourceId="1" SourceUrl="http://localhost:54780/wcf/PhoneSwitchPublicAPIService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PhoneSwitchPublicAPIService1.xsd" MetadataType="Schema" ID="46e7213e-094f-4986-a547-cf46e400c762" SourceId="1" SourceUrl="http://localhost:54780/wcf/PhoneSwitchPublicAPIService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PhoneSwitchPublicAPIService3.xsd" MetadataType="Schema" ID="dbe19000-6646-49e6-a4cd-7a2fd68ef929" SourceId="1" SourceUrl="http://localhost:54780/wcf/PhoneSwitchPublicAPIService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PhoneSwitchPublicAPIService4.xsd" MetadataType="Schema" ID="9747d027-4c68-4b74-a27f-1dcaa69fd694" SourceId="1" SourceUrl="http://localhost:54780/wcf/PhoneSwitchPublicAPIService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PhoneSwitchPublicAPIService.disco" MetadataType="Disco" ID="90fde7e2-7a04-431a-b49a-26e4e5a6967c" SourceId="1" SourceUrl="http://localhost:54780/wcf/PhoneSwitchPublicAPIService.svc?disco" />
+    <MetadataFile FileName="PhoneSwitchPublicAPIService5.xsd" MetadataType="Schema" ID="c760c20e-d8e3-4a4f-b4a4-d5bbbb92b987" SourceId="1" SourceUrl="http://localhost:54780/wcf/PhoneSwitchPublicAPIService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PhoneSwitchPublicAPIService.wsdl" MetadataType="Wsdl" ID="841a2ad9-33cb-4651-95d6-a07ed76fa074" SourceId="1" SourceUrl="http://localhost:54780/wcf/PhoneSwitchPublicAPIService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/pbx_shared" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/pbx_shared" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:54780/wcf/PhoneSwitchPublicAPIService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="phonecall">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActiveReps" nillable="true" type="tns:ArrayOfsupportrep" />
+      <xs:element minOccurs="0" name="callstate" type="tns:phonecall.callstates" />
+      <xs:element minOccurs="0" name="connected_extensions" nillable="true" type="tns:ArrayOfextension" />
+      <xs:element minOccurs="0" name="dialednbr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="direction" type="tns:phonecall.calldirection" />
+      <xs:element minOccurs="0" name="endtime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="initiallyansweredat" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="localnbr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="phonesystemcallid" type="xs:int" />
+      <xs:element minOccurs="0" name="remotenbr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="starttime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="switchid" type="xs:int" />
+      <xs:element minOccurs="0" name="switchspecificcallid" type="xs:int" />
+      <xs:element minOccurs="0" name="totalholdms" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="phonecall" nillable="true" type="tns:phonecall" />
+  <xs:complexType name="ArrayOfsupportrep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="supportrep" nillable="true" type="tns:supportrep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsupportrep" nillable="true" type="tns:ArrayOfsupportrep" />
+  <xs:complexType name="supportrep">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activecall" nillable="true" type="tns:phonecall" />
+      <xs:element minOccurs="0" name="repid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="repstate" type="tns:supportrep.repstates" />
+      <xs:element minOccurs="0" name="returntoavailabletime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="standby" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="supportrep" nillable="true" type="tns:supportrep" />
+  <xs:simpleType name="supportrep.repstates">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="offduty" />
+      <xs:enumeration value="available" />
+      <xs:enumeration value="inacall" />
+      <xs:enumeration value="postcallcleanup" />
+      <xs:enumeration value="unavailable" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="supportrep.repstates" nillable="true" type="tns:supportrep.repstates" />
+  <xs:simpleType name="phonecall.callstates">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ringing" />
+      <xs:enumeration value="hold" />
+      <xs:enumeration value="active" />
+      <xs:enumeration value="ended" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="ringing_again" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="phonecall.callstates" nillable="true" type="tns:phonecall.callstates" />
+  <xs:complexType name="ArrayOfextension">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="extension" nillable="true" type="tns:extension" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfextension" nillable="true" type="tns:ArrayOfextension" />
+  <xs:complexType name="extension">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="e911location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="extension_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="extension_nbr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="extension_type" type="tns:extension.extension_types" />
+      <xs:element minOccurs="0" name="outbound_callerid_phonenbr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="routing_options" nillable="true" type="tns:call_routing_options" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="extension" nillable="true" type="tns:extension" />
+  <xs:simpleType name="extension.extension_types">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="digital" />
+      <xs:enumeration value="ip" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="extension.extension_types" nillable="true" type="tns:extension.extension_types" />
+  <xs:complexType name="call_routing_options">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="announce_name" type="xs:boolean" />
+      <xs:element minOccurs="0" name="blast_calls" type="xs:boolean" />
+      <xs:element minOccurs="0" name="busy_route" nillable="true" type="tns:call_route_destination" />
+      <xs:element minOccurs="0" name="not_answered_route" nillable="true" type="tns:call_route_destination" />
+      <xs:element minOccurs="0" name="num_rings_per_route" type="xs:int" />
+      <xs:element minOccurs="0" name="offline_route" nillable="true" type="tns:call_route_destination" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="route_type" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="try_first_route" nillable="true" type="tns:call_route_destination" />
+      <xs:element minOccurs="0" name="unanswered_mailbox" nillable="true" type="tns:mailbox" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="call_routing_options" nillable="true" type="tns:call_routing_options" />
+  <xs:complexType name="call_route_destination">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ring_time" type="xs:int" />
+      <xs:element minOccurs="0" name="route_destination_type" type="tns:call_route_destination.routable_types" />
+      <xs:element minOccurs="0" name="target_attendant" nillable="true" type="tns:attendant" />
+      <xs:element minOccurs="0" name="target_extension" nillable="true" type="tns:extension" />
+      <xs:element minOccurs="0" name="target_mailbox" nillable="true" type="tns:mailbox" />
+      <xs:element minOccurs="0" name="target_queue" nillable="true" type="tns:queue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="call_route_destination" nillable="true" type="tns:call_route_destination" />
+  <xs:simpleType name="call_route_destination.routable_types">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="extension" />
+      <xs:enumeration value="queue" />
+      <xs:enumeration value="attendant" />
+      <xs:enumeration value="mailbox" />
+      <xs:enumeration value="find_me" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="call_route_destination.routable_types" nillable="true" type="tns:call_route_destination.routable_types" />
+  <xs:complexType name="attendant">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="attendant" nillable="true" type="tns:attendant" />
+  <xs:complexType name="mailbox">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="greeting_file" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hide_mailbox_From_directory" type="xs:boolean" />
+      <xs:element minOccurs="0" name="mailbox_nbr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="skip_voicemail_instructions" type="xs:boolean" />
+      <xs:element minOccurs="0" name="timezone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="voicemail_delete_timeframe" type="tns:mailbox.voicemail_delete_timeframes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="mailbox" nillable="true" type="tns:mailbox" />
+  <xs:simpleType name="mailbox.voicemail_delete_timeframes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="never" />
+      <xs:enumeration value="week" />
+      <xs:enumeration value="month" />
+      <xs:enumeration value="year" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="mailbox.voicemail_delete_timeframes" nillable="true" type="tns:mailbox.voicemail_delete_timeframes" />
+  <xs:complexType name="queue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="after_timeout" nillable="true" type="tns:call_route_destination" />
+      <xs:element minOccurs="0" name="agent_removal_action" type="tns:queue.agent_removal_actions" />
+      <xs:element minOccurs="0" name="agents" nillable="true" type="tns:ArrayOfsupportrep" />
+      <xs:element minOccurs="0" name="announce_hold_time" type="xs:boolean" />
+      <xs:element minOccurs="0" name="announce_position" type="xs:boolean" />
+      <xs:element minOccurs="0" name="callerid_prefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="if_agent_does_not_answer" type="tns:queue.unanswered_actions" />
+      <xs:element minOccurs="0" name="joinwhenempty" type="xs:boolean" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="play_periodic_announcements" type="xs:boolean" />
+      <xs:element minOccurs="0" name="priority" type="xs:int" />
+      <xs:element minOccurs="0" name="queue_timeout" type="xs:int" />
+      <xs:element minOccurs="0" name="ring_duration" type="xs:int" />
+      <xs:element minOccurs="0" name="ringinuse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="user_agent_priority" type="xs:boolean" />
+      <xs:element minOccurs="0" name="wrapup_time" type="xs:int" />
+      <xs:element minOccurs="0" name="zero_exits_queue" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="queue" nillable="true" type="tns:queue" />
+  <xs:simpleType name="queue.agent_removal_actions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pause" />
+      <xs:enumeration value="logoff" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="queue.agent_removal_actions" nillable="true" type="tns:queue.agent_removal_actions" />
+  <xs:simpleType name="queue.unanswered_actions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="do_nothing" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="queue.unanswered_actions" nillable="true" type="tns:queue.unanswered_actions" />
+  <xs:simpleType name="phonecall.calldirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="inbound" />
+      <xs:enumeration value="outbound" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="phonecall.calldirection" nillable="true" type="tns:phonecall.calldirection" />
+</xs:schema>

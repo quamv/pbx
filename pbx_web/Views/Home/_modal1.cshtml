@@ -1,0 +1,54 @@
+﻿
+<div class="buttons">
+    @*style="display: none;">*@
+    @*style="display:none;"*@
+    <button id="btntrunkmodal"
+            type="button"
+            class="w3-btn w3-hide" data-toggle="modal" data-target="#trunkmenumodaldiv">
+        open modal operator menu
+    </button>
+    @*<button type="button"
+            data-bind="click: opentrunkmodal"
+            class="w3-btn w3-hide">
+        open modal ko
+    </button>*@
+</div>
+
+<div class="modal fade" id="trunkmenumodaldiv" role="dialog" style="display:none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content" style="min-width: 60%;">
+
+            modal.
+
+            @*<div data-bind="if: selectedtrunk">
+                <h2>trunk <span data-bind="text: selectedtrunk().phonenbr"></span></h2>
+
+                <div data-bind="if: selectedtrunk().trunkstate() != trunkstates.offline">
+                    <button data-bind="click: function(data, event) { disabletrunk(selectedtrunk().phonenbr); }">
+                        disable trunk line
+                    </button>
+                </div>
+
+                <div data-bind="if: selectedtrunk().trunkstate() == trunkstates.offline">
+                    <button data-bind="click: function(data, event) { enabletrunk(selectedtrunk().phonenbr); } ">
+                        enable trunk line
+                    </button>
+                </div>
+
+                <div data-bind="if: selectedtrunk().activecall">
+                    <div class="w3-container w3-panel w3-border w3-padding-8">
+
+                        <h4>Connected to</h4>
+
+                        <button class="w3-right" data-bind="click: function(data, event){  disconnectclick(selectedtrunk().activecall()); }">
+                            <i class="fa fa-remove"></i>
+                        </button>
+                        <span data-bind="text: selectedtrunk().activecall().remotenbr"></span>
+                    </div>
+
+                </div>
+            </div>*@
+        </div>
+    </div>
+</div>
+

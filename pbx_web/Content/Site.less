@@ -1,0 +1,63 @@
+﻿
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    overflow-x: auto;
+}
+
+/* Set padding to keep content from hitting the edges */
+
+.viewheader { 
+    color: white;
+    padding: 1em;
+    background-color: darkslategray;
+}
+
+
+.vlistdiv {
+    min-height: 5.5em;
+    text-align: center;
+    padding: 1em;
+}
+
+.clean {margin:0; padding: 0; border: 0;}
+
+.phonelinesvlist{
+    .clean;
+    ul, li {.clean;}
+    li {list-style-type: none; }
+}
+
+.idle {
+    background-color: darkgray;
+}
+
+
+.blink {
+  animation: blink-animation 5s steps(50, start) infinite;
+  -webkit-animation: blink-animation 5s steps(50, start) infinite;
+}
+@keyframes blink-animation { to { visibility: hidden; } }
+@-webkit-keyframes blink-animation { to { visibility: hidden; } }
+
+
+.pseudoflash_busy{
+  animation: breathe-animation 5s steps(200, start) infinite;
+  -webkit-animation: breathe-animation 5s steps(200, start) infinite;
+}
+@keyframes breathe-animation { to { background-color: darken(mistyrose, 15%); } }
+@-webkit-keyframes breathe-animation { to { background-color: darken(mistyrose, 15%); } }
+
+.hold {
+    background-color: mistyrose;
+    .pseudoflash_busy;
+}
+
+.ringing {
+    background-color: lightyellow;
+}
+
+.active {
+    background-color: paleturquoise;
+}
+

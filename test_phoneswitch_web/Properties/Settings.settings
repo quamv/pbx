@@ -1,0 +1,22 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="test_phoneswitch_web.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="pbx_trunks" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;1234567890,t1&lt;/string&gt;
+  &lt;string&gt;1234567891,t1&lt;/string&gt;
+  &lt;string&gt;1234567892,t1&lt;/string&gt;
+  &lt;string&gt;1234567893,t1&lt;/string&gt;
+  &lt;string&gt;1234567894,t1&lt;/string&gt;
+  &lt;string&gt;1234567895,t1&lt;/string&gt;
+  &lt;string&gt;1234567896,t1&lt;/string&gt;
+  &lt;string&gt;6175551234,analog&lt;/string&gt;
+  &lt;string&gt;6175551235,analog&lt;/string&gt;
+  &lt;string&gt;6175551236,analog&lt;/string&gt;
+  &lt;string&gt;6175551237,analog&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

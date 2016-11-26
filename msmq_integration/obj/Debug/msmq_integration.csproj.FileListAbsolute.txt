@@ -1,0 +1,22 @@
+C:\src\admin3\kosupportUmlIntegrated\all\msmq_integration\bin\Debug\msmq_integration.dll
+C:\src\admin3\kosupportUmlIntegrated\all\msmq_integration\bin\Debug\msmq_integration.pdb
+C:\src\admin3\kosupportUmlIntegrated\all\msmq_integration\bin\Debug\msmq_base_support.dll
+C:\src\admin3\kosupportUmlIntegrated\all\msmq_integration\bin\Debug\phoneswitchlib.dll
+C:\src\admin3\kosupportUmlIntegrated\all\msmq_integration\bin\Debug\shared.dll
+C:\src\admin3\kosupportUmlIntegrated\all\msmq_integration\bin\Debug\msmq_base_support.pdb
+C:\src\admin3\kosupportUmlIntegrated\all\msmq_integration\bin\Debug\phoneswitchlib.pdb
+C:\src\admin3\kosupportUmlIntegrated\all\msmq_integration\bin\Debug\shared.pdb
+C:\src\admin3\kosupportUmlIntegrated\all\msmq_integration\obj\Debug\msmq_integration.csprojResolveAssemblyReference.cache
+C:\src\admin3\kosupportUmlIntegrated\all\msmq_integration\obj\Debug\msmq_integration.dll
+C:\src\admin3\kosupportUmlIntegrated\all\msmq_integration\obj\Debug\msmq_integration.pdb
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\msmq_integration\bin\Debug\msmq_integration.dll
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\msmq_integration\bin\Debug\msmq_integration.pdb
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\msmq_integration\bin\Debug\msmq_base_support.dll
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\msmq_integration\bin\Debug\phoneswitchlib.dll
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\msmq_integration\bin\Debug\shared.dll
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\msmq_integration\bin\Debug\msmq_base_support.pdb
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\msmq_integration\bin\Debug\phoneswitchlib.pdb
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\msmq_integration\bin\Debug\shared.pdb
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\msmq_integration\obj\Debug\msmq_integration.csprojResolveAssemblyReference.cache
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\msmq_integration\obj\Debug\msmq_integration.dll
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\msmq_integration\obj\Debug\msmq_integration.pdb

@@ -1,0 +1,51 @@
+﻿<template id="phonelinesvlisttemplate">
+    <h3 class="viewheader">lines</h3>
+    <ul data-bind="foreach: sortedphonelines" class="phonelinesvlist">
+        <li>
+            <div data-bind="css: linecss">
+                @*<div class="vlistdiv list-group-item list-group-item-danger" >*@
+                    <div data-bind="text: phonenbr"></div>
+
+                    <div data-bind="if: activecall">
+                        state:
+                        <span data-bind="text: activecall().callstateobs"></span>
+                        <span data-bind="text: 'Call: ' + activecall().callid + ' remote number: ' + activecall().remotenbr"></span>
+                        <div class="callbuttons">
+                            <span data-bind="if: activecall().callstateobs() == 0 ">
+                                <button class="btn-default"
+                                        data-bind="click: $root.answercall.bind($root, $data.activecall().callid)">
+                                    Answer
+                                </button>
+                            </span>
+                            <span data-bind="if: activecall().callstateobs() == 1">
+                                <button data-bind="click: $root.resumecall.bind($root, $data.activecall().callid)">Resume</button>
+                                <button data-bind="click: $root.transfer.bind($root, $data.activecall().callid)">Transfer</button>
+                            </span>
+                            <span data-bind="if: activecall().callstateobs() == 2">
+                                <button data-bind="click: $root.holdcall.bind($root, $data.activecall().callid)">Hold</button>
+                            </span>
+                            <button class="btn-danger"
+                                    data-bind="click: $root.endcall.bind($root, $data.activecall().callid)">
+                                End
+                            </button>
+                        </div>
+
+                        <div data-bind="if: activecall().connected_extensions_obs()">
+
+                            <div data-bind="if: activecall().connected_extensions_obs().length > 0">
+                                <div data-bind="with: activecall">
+                                    Connected Extensions:
+                                    <ul data-bind="foreach: connected_extensions_obs">
+                                        <li>
+                                            <span data-bind="text: $data"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        </div>
+                </div>
+</li>
+    </ul>
+</template>

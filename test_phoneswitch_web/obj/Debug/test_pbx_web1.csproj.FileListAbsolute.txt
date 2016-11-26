@@ -1,0 +1,8 @@
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\test_phoneswitch_web\bin\Debug\OrderedTest1.orderedtest
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\test_phoneswitch_web\bin\Debug\test_phoneswitch_web.dll.config
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\test_phoneswitch_web\bin\Debug\test_phoneswitch_web.dll
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\test_phoneswitch_web\bin\Debug\test_phoneswitch_web.pdb
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\test_phoneswitch_web\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\test_phoneswitch_web\obj\Debug\test_pbx_web1.csprojResolveAssemblyReference.cache
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\test_phoneswitch_web\obj\Debug\test_phoneswitch_web.dll
+C:\Users\admin3\Documents\Visual Studio 2015\Projects\all\test_phoneswitch_web\obj\Debug\test_phoneswitch_web.pdb
