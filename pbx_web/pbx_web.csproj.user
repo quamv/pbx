@@ -2,8 +2,9 @@
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectView>ProjectFiles</ProjectView>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <ToolsVersionPromptShown>2.0</ToolsVersionPromptShown>
+    <NameOfLastUsedPublishProfile>local_iis</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

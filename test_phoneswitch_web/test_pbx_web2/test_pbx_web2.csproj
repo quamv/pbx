@@ -49,7 +49,9 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
@@ -64,6 +66,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\LIVE_adminproxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LIVE_publicapiproxy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LIVE_publicapiproxy\UnitTest1.cs" />
     <Compile Include="Service References\publicapiproxy\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,6 +84,7 @@
     </Compile>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTest2.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -97,6 +111,41 @@
     <None Include="Service References\adminproxy\test_pbx_web2.adminproxy.phonenumber.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\LIVE_adminproxy\PhoneSwitchAdminService.wsdl" />
+    <None Include="Service References\LIVE_adminproxy\PhoneSwitchAdminService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LIVE_adminproxy\PhoneSwitchAdminService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LIVE_adminproxy\PhoneSwitchAdminService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LIVE_adminproxy\PhoneSwitchAdminService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LIVE_adminproxy\test_pbx_web2.LIVE_adminproxy.phonenumber.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LIVE_publicapiproxy\PhoneSwitchPublicAPIService.wsdl" />
+    <None Include="Service References\LIVE_publicapiproxy\PhoneSwitchPublicAPIService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LIVE_publicapiproxy\PhoneSwitchPublicAPIService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LIVE_publicapiproxy\PhoneSwitchPublicAPIService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LIVE_publicapiproxy\PhoneSwitchPublicAPIService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LIVE_publicapiproxy\PhoneSwitchPublicAPIService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LIVE_publicapiproxy\test_pbx_web2.LIVE_publicapiproxy.phonecall.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\publicapiproxy\PhoneSwitchPublicAPIService.wsdl" />
     <None Include="Service References\publicapiproxy\PhoneSwitchPublicAPIService.xsd">
       <SubType>Designer</SubType>
@@ -119,6 +168,8 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\adminproxy\" />
+    <WCFMetadataStorage Include="Service References\LIVE_adminproxy\" />
+    <WCFMetadataStorage Include="Service References\LIVE_publicapiproxy\" />
     <WCFMetadataStorage Include="Service References\publicapiproxy\" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +198,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\adminproxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LIVE_adminproxy\PhoneSwitchAdminService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LIVE_adminproxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LIVE_adminproxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LIVE_adminproxy\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LIVE_publicapiproxy\PhoneSwitchPublicAPIService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LIVE_publicapiproxy\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LIVE_publicapiproxy\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LIVE_publicapiproxy\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

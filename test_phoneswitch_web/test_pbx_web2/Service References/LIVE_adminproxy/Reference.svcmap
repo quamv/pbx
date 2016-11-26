@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b814690c-6bdc-454c-b367-15c6930b84c3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/pbx_web/wcf/PhoneSwitchAdminService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PhoneSwitchAdminService.wsdl" MetadataType="Wsdl" ID="2c50fcbf-7148-44ca-ab8c-f4b4b6c41dec" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchAdminService.svc?wsdl" />
+    <MetadataFile FileName="PhoneSwitchAdminService.disco" MetadataType="Disco" ID="6273f90b-d8f6-4ec7-8082-4fd351e8136a" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchAdminService.svc?disco" />
+    <MetadataFile FileName="PhoneSwitchAdminService.xsd" MetadataType="Schema" ID="95cab2cf-cbee-437a-84f6-9ec58a689384" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchAdminService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PhoneSwitchAdminService1.xsd" MetadataType="Schema" ID="495e2dc6-7b06-42c2-ba8c-74603fb429b9" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchAdminService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PhoneSwitchAdminService2.xsd" MetadataType="Schema" ID="725da3b3-ca06-433c-a2ff-9bb3e651f54c" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchAdminService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PhoneSwitchAdminService3.xsd" MetadataType="Schema" ID="2249c8d8-d785-4df2-bc13-8edf5c0cc431" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchAdminService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

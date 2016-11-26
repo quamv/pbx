@@ -10,11 +10,11 @@ namespace test_pbx_web2
 {
     public class pots_co
     {
-        publicapiproxy.PhoneSwitchPublicAPIServiceClient publicapiproxy =
-            new publicapiproxy.PhoneSwitchPublicAPIServiceClient();
+        LIVE_publicapiproxy.PhoneSwitchPublicAPIServiceClient publicapiproxy =
+            new LIVE_publicapiproxy.PhoneSwitchPublicAPIServiceClient();
 
-        adminproxy.PhoneSwitchAdminServiceClient _adminproxy =
-            new adminproxy.PhoneSwitchAdminServiceClient();
+        LIVE_adminproxy.PhoneSwitchAdminServiceClient _adminproxy =
+            new LIVE_adminproxy.PhoneSwitchAdminServiceClient();
 
         public List<adminproxy.phonenumber> pbx_phonenumbers = new List<adminproxy.phonenumber>();
         public List<adminproxy.phonenumber> available_nbrs
@@ -39,10 +39,10 @@ namespace test_pbx_web2
 
         }
 
-        public adminproxy.phonenumber getavailableline()
+        public LIVE_adminproxy.phonenumber getavailableline()
         {
             var tmp = _adminproxy.getphonenumbers()
-                    .Where(pn => pn.linestate == adminproxy.phonenumber.trunkstates.idle)
+                    .Where(pn => pn.linestate == LIVE_adminproxy.phonenumber.trunkstates.idle)
                     .First();
 
             return tmp;

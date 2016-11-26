@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="92529f34-a86a-4665-8eb0-461b31800d52" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/pbx_web/wcf/PhoneSwitchPublicApiService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PhoneSwitchPublicAPIService.xsd" MetadataType="Schema" ID="d5f509a3-b1e7-4430-8334-48fd0f7cfa69" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchPublicAPIService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PhoneSwitchPublicAPIService1.xsd" MetadataType="Schema" ID="85ce774a-03d2-4df2-a645-96c68ffc0eda" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchPublicAPIService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PhoneSwitchPublicAPIService2.xsd" MetadataType="Schema" ID="ed6e9a01-395f-4f46-aee1-8878bc8a5ed3" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchPublicAPIService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PhoneSwitchPublicAPIService.disco" MetadataType="Disco" ID="500c57e1-f8c4-48b7-ad0c-54f683af29bd" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchPublicAPIService.svc?disco" />
+    <MetadataFile FileName="PhoneSwitchPublicAPIService3.xsd" MetadataType="Schema" ID="a032cf60-a861-4cec-8cfb-c12017cf4d8e" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchPublicAPIService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PhoneSwitchPublicAPIService.wsdl" MetadataType="Wsdl" ID="c2220dce-d833-45a4-a0dd-754c64c72a17" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchPublicAPIService.svc?wsdl" />
+    <MetadataFile FileName="PhoneSwitchPublicAPIService4.xsd" MetadataType="Schema" ID="94b96743-3a8d-4b98-82e6-7a7a7e341aee" SourceId="1" SourceUrl="http://localhost/pbx_web/wcf/PhoneSwitchPublicAPIService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
