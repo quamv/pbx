@@ -36,12 +36,10 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomMessageClass.cs" />
@@ -61,6 +59,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\common_lib\common_lib.csproj">
+      <Project>{18456119-e411-462d-a2cd-a8181395ba30}</Project>
+      <Name>common_lib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\msmq_base_support\msmq_base_support.csproj">
       <Project>{221878d9-17e8-4196-ba5c-0dd502337dab}</Project>
       <Name>msmq_base_support</Name>

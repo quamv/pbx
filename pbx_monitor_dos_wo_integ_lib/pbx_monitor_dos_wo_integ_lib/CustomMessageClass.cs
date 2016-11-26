@@ -1,5 +1,5 @@
 ﻿using pbx_dto_lib;
-using pbx_dto_lib.misc;
+using common_lib.misc;
 using System;
 using System.Collections.Generic;
 using System.Messaging;

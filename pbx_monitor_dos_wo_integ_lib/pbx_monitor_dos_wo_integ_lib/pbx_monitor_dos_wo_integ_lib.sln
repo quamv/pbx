@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_monitor_dos_wo_integ_li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msmq_base_support", "..\..\msmq_base_support\msmq_base_support.csproj", "{221878D9-17E8-4196-BA5C-0DD502337DAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_shared", "..\..\pbx_shared\pbx_shared.csproj", "{252EE2BD-AB6B-4496-BCA0-87811564B7CE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_dto_lib", "..\..\pbx_dto\pbx_dto\pbx_dto_lib.csproj", "{E22229B5-8BFE-4941-BC41-BCF1D283A65A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "common_lib", "..\..\common_lib\common_lib.csproj", "{18456119-E411-462D-A2CD-A8181395BA30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{221878D9-17E8-4196-BA5C-0DD502337DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{221878D9-17E8-4196-BA5C-0DD502337DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{221878D9-17E8-4196-BA5C-0DD502337DAB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{252EE2BD-AB6B-4496-BCA0-87811564B7CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{252EE2BD-AB6B-4496-BCA0-87811564B7CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{252EE2BD-AB6B-4496-BCA0-87811564B7CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{252EE2BD-AB6B-4496-BCA0-87811564B7CE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E22229B5-8BFE-4941-BC41-BCF1D283A65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18456119-E411-462D-A2CD-A8181395BA30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

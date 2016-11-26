@@ -33,14 +33,22 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="pbx_dto_classes.cs" />
+    <Compile Include="pbx_dto.cs" />
+    <Compile Include="pbx_dto_callandextension.cs" />
+    <Compile Include="pbx_dto_callanswered.cs" />
+    <Compile Include="pbx_dto_callended.cs" />
+    <Compile Include="pbx_dto_callreceived.cs" />
+    <Compile Include="pbx_dto_callstatechanged.cs" />
+    <Compile Include="pbx_dto_calltransferred.cs" />
+    <Compile Include="pbx_dto_callupdate_base.cs" />
+    <Compile Include="pbx_dto_fullstatus.cs" />
     <Compile Include="pbx_dto_phonecall.cs" />
+    <Compile Include="pbx_dto_phonenumber.cs" />
+    <Compile Include="pbx_dto_secondary_extension_added.cs" />
+    <Compile Include="pbx_dto_secondary_extension_removed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
