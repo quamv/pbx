@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace msmq_base_support
 {
-    public interface iBlockingReadonlyQueue<T> { T Take(); }
+    public interface iBlockingReadonlyQueue<T>
+    {
+        T Take();
+        void start();
+    }
 
 }

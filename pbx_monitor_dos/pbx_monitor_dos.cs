@@ -1,19 +1,39 @@
-﻿using pbx_shared.dto;
-using System;
+﻿using System;
+using msmq_base_support;
+using pbx_shared.dto;
+using pbx_msmq_integration;
 using System.Collections.Generic;
 
 namespace pbx_monitor_dos
 {
-    public class pbx_event_handler_dos
+    /* pbx_monitor_dos - a dos-based implementation of a pbx event monitor */
+    class pbx_monitor_dos
     {
 
-        public static void event_callback(object sender, pbx_dto dto) { event_callback(dto); }
-        public static void event_callback(pbx_dto dto)
+        /* program entry point */
+        static void Main(string[] args)
         {
-            Console.WriteLine(dto._dto_type.ToString() + " Event:");
-            event_handlers[dto._dto_type](dto);
-        }
+            var queue_name = Properties.Settings.Default.queue_name;
 
+            Console.WriteLine("MSMQ Queue Name: " + queue_name);
+
+            iBlockingReadonlyQueue<pbx_dto> pbx_dto_queue = new msmq_pbx_dto_queue(queue_name);
+
+            Console.WriteLine("Starting receiving queue...");
+
+            pbx_dto_queue.start();
+
+            Console.WriteLine("Receiving queue started. Consuming from main thread...");
+
+            while (true)
+            {
+                var dto = pbx_dto_queue.Take();
+
+                Console.WriteLine(dto._dto_type.ToString() + " Event:");
+
+                event_handlers[dto._dto_type](dto);
+            }
+        }
 
         /* event-specific handlers */
         private class event_handler_dict : Dictionary<pbx_dto.dto_type, Action<pbx_dto>> { }
@@ -91,5 +111,4 @@ namespace pbx_monitor_dos
 
 
     }
-
 }

@@ -1,7 +1,5 @@
-﻿using pbx_msmq_integration;
-using pbx_shared.dto;
+﻿using pbx_shared.dto;
 using System;
-using System.Threading;
 
 namespace pbx_msmq_integration
 {
