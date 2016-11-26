@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_dto_lib", "..\..\pbx_dt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "common_lib", "..\..\common_lib\common_lib.csproj", "{18456119-E411-462D-A2CD-A8181395BA30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_monitor_dos", "..\..\pbx_monitor_dos\pbx_monitor_dos.csproj", "{AA706900-E701-4B8C-BE5F-D0E36F3E5989}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{18456119-E411-462D-A2CD-A8181395BA30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18456119-E411-462D-A2CD-A8181395BA30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18456119-E411-462D-A2CD-A8181395BA30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA706900-E701-4B8C-BE5F-D0E36F3E5989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA706900-E701-4B8C-BE5F-D0E36F3E5989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA706900-E701-4B8C-BE5F-D0E36F3E5989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA706900-E701-4B8C-BE5F-D0E36F3E5989}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
