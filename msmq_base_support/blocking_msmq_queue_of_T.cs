@@ -33,14 +33,22 @@ namespace msmq_base_support
         public BlockingCollection<T> _queue;
 
         /* pass-through call to BlockingCollection<T>.Take() */
-        public T Take() { return this._queue.Take(); }
+        public T Take() {
+            if (!started)
+            {
+                this.start();
+            }
+            return this._queue.Take();
+        }
 
 
+        private bool started = false;
         /* start the underlying queue and our processing thread */
         public void start()
         {
             this.msmq_buffer.start();
             new System.Threading.Thread(message_processing_loop).Start();
+            started = true;
         }
 
         /* loop to process incoming messages from our feeder queue */

@@ -21,8 +21,6 @@ namespace pbx_monitor_dos_wo_integ_lib
                             CustomMessageClass._supportedtypes, 
                             CustomMessageClass._parse_msmq_message);
 
-            q.start();
-
 
             while (true)
             {
