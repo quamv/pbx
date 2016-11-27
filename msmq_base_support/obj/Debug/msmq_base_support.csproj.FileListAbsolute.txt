@@ -1,4 +1,0 @@
-C:\src\admin3\kosupportUmlIntegrated\all\msmq_base_support\bin\Debug\msmq_base_support.dll
-C:\src\admin3\kosupportUmlIntegrated\all\msmq_base_support\bin\Debug\msmq_base_support.pdb
-C:\src\admin3\kosupportUmlIntegrated\all\msmq_base_support\obj\Debug\msmq_base_support.dll
-C:\src\admin3\kosupportUmlIntegrated\all\msmq_base_support\obj\Debug\msmq_base_support.pdb
