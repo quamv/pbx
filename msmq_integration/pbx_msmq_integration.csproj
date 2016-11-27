@@ -41,6 +41,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\common_lib\common_lib.csproj">
+      <Project>{18456119-e411-462d-a2cd-a8181395ba30}</Project>
+      <Name>common_lib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\msmq_base_support\msmq_base_support.csproj">
       <Project>{221878d9-17e8-4196-ba5c-0dd502337dab}</Project>
       <Name>msmq_base_support</Name>
