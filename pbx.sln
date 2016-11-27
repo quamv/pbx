@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_signalr", "pbx_signalr\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pbx_dto_lib", "pbx_dto\pbx_dto\pbx_dto_lib.csproj", "{E22229B5-8BFE-4941-BC41-BCF1D283A65A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "common_lib", "common_lib\common_lib.csproj", "{18456119-E411-462D-A2CD-A8181395BA30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "common_lib", "..\common_lib\common_lib.csproj", "{18456119-E411-462D-A2CD-A8181395BA30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
